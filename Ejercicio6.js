@@ -9,7 +9,6 @@ for(var i = 0; i < 6; i++){
 
 document.body.style.background = color;
 document.getElementById("hexadecimal").innerHTML = color;
-document.getElementById("text").innerHTML = "Copiar Color";
 }
 
 

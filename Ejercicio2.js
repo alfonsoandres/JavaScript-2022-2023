@@ -2,7 +2,7 @@ let nombre = prompt("Dime tu nombre");
 let apellido = prompt("Dime tu apellido");
 let salario = prompt("Dime tu salario");
 let edad = prompt("Dime tu edad");
-var totalSalario;
+var totalSalario;   
 
 if (salario > 1000 & salario < 2000) {
     if (edad >= 45) {
