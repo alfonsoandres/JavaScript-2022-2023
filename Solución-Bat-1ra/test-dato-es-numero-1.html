@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Se trata de pedir al usuario un número a través
+	    de una ventana de entrada.Comprobar si es un número.
+	    El resultado mostrarlo con una ventana emergente*/
+
+        //Cuando el usuario hace clic en el botón OK, el valor introducido
+        //en el campo de texto es devuelto por el método.
+
+        let entrada=prompt("Introduce un valor numérico");
+        alert(isNaN(entrada));//Devuelve true si es string.
+                            //Devuelve true ante la cadena vacía.
+        alert(entrada);
+        //Si el usuario presiona el botón Cancel, la función devuelve null.
+        if (entrada==null){
+            alert("Operación Cancelada");
+        }
+        //Si el usuario da clic al botón OK sin introducir algun texto, se devuelve
+        //una cadena vacía.
+        //Atención a la operación OR
+        else if((isNaN(entrada)) || (entrada=="")){
+            alert("No es un número");
+        }else{
+            alert("Es un número");
+        }
+        /*
+        entrada         isNaN   entrada==""     ||
+        vacía           false     true          true    No es número
+        string          true      false         true    No es número
+        número          false     false         false   Sí es número
+        */
+
+    </script>
+</body>
+</html>
