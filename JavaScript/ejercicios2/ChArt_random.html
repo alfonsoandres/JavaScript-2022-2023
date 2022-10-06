@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaracterRandom</title>
+</head>
+<body>
+    <button id="botonVer">Ver</button>
+</script>
+    <script>
+
+    var cadena=prompt("DIME UNA FRASE");
+
+function funcion1() {
+    let size=cadena.length;
+   
+    let resultado = cadena.charAt(Math.floor(Math.random()*size));
+
+    alert(resultado);
+}
+function funcion2() {
+    let size=cadena.length;
+   
+    let resultado = cadena.charAt(Math.floor(Math.random()*size));
+
+    alert("Otra letra "+resultado);
+}
+
+var x = document.getElementById("botonVer");
+x.addEventListener("click", funcion1);
+x.addEventListener("click",funcion2);
+
+    </script>
+
+</body>
+</html>
