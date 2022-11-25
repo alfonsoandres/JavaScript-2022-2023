@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>FORMULARIO DE REGISTRO</title>
+  </head>
+  <body>
+    <form name="formulario" method="post" enctype="text/plain">
+      Nombre:
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        size="25"
+        maxlength="50"
+      /><br /><br />
+      Apellidos:
+      <input
+        type="text"
+        name="apellidos"
+        id="apellidos"
+        size="35"
+        maxlength="100"
+      />
+      <br /><br />
+      Correo electrónico:
+      <input
+        type="text"
+        value="@"
+        name="correo"
+        id="correo"
+        size="40"
+        maxlength="100"
+      />
+      <br /><br />
+      Población:
+      <input
+        type="text"
+        name="poblacion"
+        id="poblacion"
+        size="15"
+        maxlength="50"
+      />
+      <br /><br />
+      Provincia:
+      <input
+        type="text"
+        name="provincia"
+        id="provincia"
+        size="15"
+        maxlength="50"
+      />
+      <table
+        align="center"
+        width="100%"
+        border="0"
+        cellspacing="0"
+        cellpadding="10"
+      >
+        <tr>
+          <td>
+            Edad:<br />
+            <input type="radio" name="edad" value="020" /> 0-20<br />
+            <input type="radio" name="edad" value="2040" checked /> 20-40<br />
+            <input type="radio" name="edad" value="4060" /> 40-60<br />
+            <input type="radio" name="edad" value="60100" /> 60-100
+          </td>
+          <td>
+            &iquest;C&oacute;mo nos conociste?<br />
+            <input type="checkbox" name="conocer" value="Por amigos" />A
+            trav&eacute;s de un amigo.<br />
+            <input
+              type="checkbox"
+              name="conocer"
+              value="Utilizando buscador"
+            />A trav&eacute;s de un buscador.<br />
+            <input type="checkbox" name="conocer" value="Navegando" />Navegando
+            por la red.<br />
+            <input type="checkbox" name="conocer" value="Redes Sociales" />Redes
+            Sociales
+          </td>
+        </tr>
+        <br /><br />
+        <tr>
+          <td>
+            <input type="button" value="Registrar" onclick="registrar();" />
+          </td>
+          <td>
+            <input type="Reset" value="Limpiar" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="Buscar" onclick="buscar();" />
+          </td>
+        </tr>
+      </table>
+      <textarea id="objeto" rows="10" cols="50"> </textarea>
+    </form>
+  </body>
+
+  <script>
+ 		var inputs = document.getElementsByTagName('input');
+        var textarea = document.getElementById('objeto');
+		var radioEdad= document.getElementsByName('edad');
+		var checkboxConocer= document.getElementsByName('conocer');
+		var array=[];
+
+	function buscar(value) {
+		
+	}
+	function registrar(value) {
+
+		for (let index = 0; index < 5; index++) {
+			
+			textarea.value+=inputs[index].value+"\n";
+		}
+
+		for (let index = 0; index < radioEdad.length; index++) {
+			
+			if (radioEdad[index].checked) {
+				textarea.value+=radioEdad[index].value+"\n";
+				break;
+			}
+		}
+
+		for (let index = 0; index < checkboxConocer.length; index++) {
+			
+			if (checkboxConocer[index].checked) {
+				textarea.value+=checkboxConocer[index].value+"\n";
+
+			
+			}
+			
+		}
+		textarea.value+='\n'+"-----------------------";
+
+
+		
+	}
+
+
+
+  </script>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+</head>
+<body>
+    <script>
+    function imagenes() {
+        var galaxias= new Array(
+            new Array("nebulosas1.jpg"),new Array("nebulosas2.jpg"),
+            new Array("nebulosas3.jpg"),new Array("nebulosas4.jpg"),
+            new Array("nebulosas5.jpg"),new Array("nebulosas6.jpg"),
+            new Array("nebulosas7.jpg"),
+        );
+
+            var opciones = document.getElementById('opfotos');
+            var imagenes = document.getElementById('foto');
+           
+
+        
+          //  TextArea.value=Opcion[1].value;
+            console.log(opciones.value); 
+            console.log(galaxias[opciones.value]);
+
+            console.log(imagenes.src=galaxias[opciones.value]);
+
+            imagenes.src='img\\'+galaxias[opciones.value];
+      
+        }
+        </script>
+   
+            <img id="foto" src="img\nebulosas1.jpg" width="500" heigth="500">  
+   
+    <br>
+    <form name="formul" align="center">
+    
+        Selecciona una opcion: 
+        
+            <select  id="opfotos" onclick="imagenes()" >
+                    <option value="0">foto 1</option>
+                    <option value="1">foto 2</option>
+                    <option value="2">foto 3</option>
+                    <option value="3">foto 4</option>
+                    <option value="4">foto 5</option>
+                    <option value="5">foto 6</option>
+                    <option value="6">foto 7</option>
+        </select>
+    </form>
+    </body>
+
+    
+</html>
